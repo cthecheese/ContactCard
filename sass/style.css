@@ -1,0 +1,129 @@
+/***********************************
+Variables
+***********************************/
+/***********************************
+*Grid Import
+***********************************/
+.cc-pane-1-6 {
+  width: 16.6666%; }
+
+.cc-pane-1-4 {
+  width: 25%; }
+
+.cc-pane-2-6, .cc-pane-1-3 {
+  width: 33.3333%; }
+
+.cc-pane-3-6, .cc-pane-1-2, .cc-pane-2-4 {
+  width: 50%; }
+
+.cc-pane-4-6, .cc-pane-2-3 {
+  width: 66.6666%; }
+
+.cc-pane-3-4 {
+  width: 75%; }
+
+.cc-pane-5-6 {
+  width: 83.3333%; }
+
+.cc-pane-6-6, .cc-pane-3-3, .cc-pane-1 {
+  width: 100%; }
+
+.cc-pane-1-6:hover, .cc-pane-1-4:hover,
+.cc-pane-2-6:hover, .cc-pane-1-3:hover,
+.cc-pane-3-6:hover, .cc-pane-1-2:hover,
+.cc-pane-2-4:hover, .cc-pane-4-6:hover,
+.cc-pane-2-3:hover, .cc-pane-3-4:hover,
+.cc-pane-5-6:hover, .cc-pane-6-6:hover,
+.cc-pane-3-3:hover, .cc-pane-1:hover {
+  background-color: #C2CAC2; }
+
+.cc-pane-1-6, .cc-pane-1-4,
+.cc-pane-2-6, .cc-pane-1-3,
+.cc-pane-3-6, .cc-pane-1-2,
+.cc-pane-2-4, .cc-pane-4-6,
+.cc-pane-2-3, .cc-pane-3-4,
+.cc-pane-5-6, .cc-pane-6-6,
+.cc-pane-3-3, .cc-pane-1 {
+  float: left;
+  height: 100%; }
+
+/***********************************
+.cc-main
+	The full card in it's glory
+***********************************/
+.cc-main {
+  background-color: #8E9E8E;
+  width: 200px;
+  padding: 10px 20px; }
+  .cc-main h5, .cc-main p {
+    margin: 0px; }
+
+/***********************************
+.cc-container
+	The container used to hold
+	the multiple sub-cards
+***********************************/
+.cc-container {
+  perspective: 1000; }
+
+.cc-container:hover .cc-flip,
+.cc-container.hover .cc-flip {
+  transform: rotateY(180deg); }
+
+.cc-container, .cc-front, .cc-back {
+  height: 178px;
+  width: 200px;
+  margin-bottom: 5px; }
+
+/***********************************
+.cc-flip
+	The container that acutally
+	does the flipping animation
+***********************************/
+.cc-flip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/***********************************
+.cc-front & .cc-back
+	The front and back sub-cards
+***********************************/
+.cc-front, .cc-back {
+  backface-visibility: hidden;
+  background-color: #8E9E8E;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.cc-front {
+  z-index: 2;
+  background-color: #8E9E8E;
+  transform: rotateY(0deg); }
+
+.cc-back {
+  transform: rotateY(180deg);
+  background-color: #647964; }
+
+/*************************************
+	Insert Custom Imports Here
+*************************************/
+#portrait {
+  max-width: 100%;
+  height: 100%; }
+
+.cc-main {
+  border-radius: 15px; }
+
+.cc-row {
+  height: 100%; }
+
+.cc-description, .cc-front {
+  text-align: center; }
+
+.cc-description h5 {
+  font-size: 20px; }
+.cc-description p {
+  font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */

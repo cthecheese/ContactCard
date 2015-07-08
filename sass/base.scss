@@ -1,0 +1,100 @@
+/***********************************
+Variables
+***********************************/
+
+$card-width: 200px;
+$container-height: 178px;
+
+$primary-color: #8E9E8E; // Sets background of main card & front portrait
+$secondary-color: #647964; // Sets background of back portrait
+$tertiary-color: #C2CAC2; // Sets default hover coloring
+
+$animation: rotateY(180deg);
+$duration: .6s; 
+
+/***********************************
+*Grid Import
+***********************************/
+
+@import 'grid';
+
+
+/***********************************
+.cc-main
+	The full card in it's glory
+***********************************/
+
+.cc-main {
+	background-color: $primary-color;
+	width: $card-width;
+	padding: 10px 20px;
+
+	h5, p{
+		margin: 0px;
+	}
+}
+
+/***********************************
+.cc-container
+	The container used to hold
+	the multiple sub-cards
+***********************************/
+
+.cc-container {
+	perspective: 1000;
+}
+
+.cc-container:hover .cc-flip,
+.cc-container.hover .cc-flip{
+	transform: $animation;
+}
+
+.cc-container, .cc-front, .cc-back{
+	height: $container-height;
+	width: $card-width;
+	margin-bottom: 5px;
+}
+
+/***********************************
+.cc-flip
+	The container that acutally
+	does the flipping animation
+***********************************/
+
+.cc-flip{
+	transition: $duration;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/***********************************
+.cc-front & .cc-back
+	The front and back sub-cards
+***********************************/
+
+.cc-front, .cc-back{
+	backface-visibility: hidden;
+	background-color: $primary-color;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cc-front {
+	z-index: 2;
+	background-color: $primary-color;
+	transform: rotateY(0deg);
+}
+
+.cc-back {
+	transform: $animation;
+	background-color: #647964;
+}
+
+/*************************************
+	Insert Custom Imports Here
+*************************************/
+
+
+@import 'custom';
